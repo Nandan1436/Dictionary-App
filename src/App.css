@@ -16,6 +16,7 @@ body {
 .box {
   width: 90%;
   max-width: 600px;
+  min-width: 350px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -48,7 +49,7 @@ input:focus {
   border-color: #6c63ff;
 }
 
-button {
+/* button {
   padding: 12px;
   background-color: #6c63ff;
   color: white;
@@ -57,7 +58,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
-}
+} */
 
 button:hover {
   background-color: #5a52d5;
@@ -129,4 +130,66 @@ button:hover {
   .phonetics {
     font-size: 16px;
   }
+}
+
+.suggestions {
+  list-style-type: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: -10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  position: relative;
+}
+
+.suggestions li {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
+
+.suggestions li:hover {
+  background-color: #f5f5ff;
+  color: #6c63ff;
+}
+
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between input and button */
+}
+
+.input-container input {
+  flex: 1; /* Makes input take up available space */
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-container button {
+  padding: 12px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.input-container button:hover {
+  background-color: #5a52d5;
 }
